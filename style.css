@@ -103,7 +103,6 @@ h1 .hi {
 
 }
 
-
   .card {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 80%;
@@ -145,19 +144,6 @@ h1 .hi {
      padding: 1em;
  }
  
- @media (min-width: 600px) {
-     .card {
-         flex-direction: row;
-     }
- 
-     .profile-img {
-         width: 12em;
-         height: 100%;
-         border-radius: .5em 0em 0em .5em;
-     }
-
-  
- }
 
 
 /* ********************************************* */
@@ -184,3 +170,20 @@ h1 .hi {
     
 }
 
+/* ******************************************************* */
+
+/* ******medeia query************************************ */
+
+@media (min-width: 600px) {
+    .card {
+        flex-direction: row;
+    }
+
+    .profile-img {
+        width: 12em;
+        height: 100%;
+        border-radius: .5em 0em 0em .5em;
+    }
+
+ 
+}
