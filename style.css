@@ -226,6 +226,15 @@ h4  {
   font-size: 1.6em;
   
 }
+h5 {
+  text-align: center;
+  margin-top: -2.5em;
+  font-size: 1em;
+ padding-top: .3em;
+ font-weight: 600;
+ color: #f5cda9;
+ padding-bottom: 1em;
+}
 
 a {
   text-decoration: none;
@@ -237,6 +246,7 @@ a {
   padding: .5em;
   text-align: center;
   z-index: 100;
+  font-size: .8em;
 }
 /* ******************************************************* */
 
