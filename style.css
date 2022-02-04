@@ -1,17 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #1a1a1a;
+  font-family: "Poppins", sans-serif;
+  background-color: #1a1a1a;
 }
-
-
 
 /* intro */
 .intro {
@@ -97,93 +95,137 @@ h1 .hi {
 /* sectionabout */
 
 .about {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
-  .card {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width:600px;
-    text-align: center;
-   display: flex;
-   flex-direction: column;
-    background-color:  #8a4f17;
-    color: #fdf3e9;
-    border-radius: .5em;
-    
-   
- }
- .profile-img {
-     width: 100%;
-     border: 3px solid #f5cda9;
-     border-radius: .5em .5em 0em 0em;
- }
- .profile-main {
-     padding: .5em;
-    
- }
- 
- h2 {
-     margin-bottom: 1em;
-     font-size: 1.8em;
-     font-weight: 800;
-     letter-spacing: 1px;
-     text-transform: uppercase;
- }
- .profile-role {
-     margin-bottom: .2em;
-     font-size: 1.2em;
-     font-weight: 600;
- }
- 
- .profile-body {
-     text-align: left;
-     padding: 1em;
- }
- 
+.card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #8a4f17;
+  color: #fdf3e9;
+  border-radius: 0.5em;
+}
+.profile-img {
+  width: 100%;
+  border: 3px solid #f5cda9;
+  border-radius: 0.5em 0.5em 0em 0em;
+}
+.profile-main {
+  padding: 0.5em;
+}
 
+h2 {
+  margin-bottom: 1em;
+  font-size: 1.8em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.profile-role {
+  margin-bottom: 0.2em;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.profile-body {
+  text-align: left;
+  padding: 1em;
+}
 
 /* ********************************************* */
 
 /* section work */
-.portfolio {
-    color: #ffdebf;
-    font-size: 2.2em;
-    font-weight: 400;
-    text-align: center;
-    padding-bottom: 1em;
-    
-  }
-
-
-
 
 .work {
-    height: 100vh;
-   width: 100%;
-    display:grid;
-   grid-template-columns:repeat(3, 1fr);
+ min-height: 100vh;
+  border: 1px solid red;
+  width: 100%;
+  display:grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+ 
   
-    
+  
+   
+}
+.portfolio {
+  color: #ffdebf;
+  font-size: 2.2em;
+  font-weight: 400;
+  font-size: 6vw;
+  align-self: center;
+ 
+
+  
+
+
 }
 
+.container-gallery {
+  /* grid-row: 2; */
+  /* margin-top:7em; */
+  border: 1px solid wheat;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: .5em;
+}
+
+
+.gallery-item {
+  background-color: #8a4f17;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.item-1 {
+  grid-column: 1/5;
+  grid-row: 1/4;
+  background-image: url(img/omnifood_35_2_optimized.png);
+  background-position: top left;
+}
+.item-2 {
+  grid-column: 5/7;
+  grid-row: 1/9;
+  background-image: url(img/lovescript_50_optimized.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.item-3 {
+  grid-column: 1/5;
+  grid-row: span 5/9;
+  background-image: url(img/tijuana-html-2022-01-31-01_04_36_optimized.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h4  {
+  text-align: center;
+  margin-bottom: 2em;
+}
 /* ******************************************************* */
 
 /* ******medeia query************************************ */
 
 @media (min-width: 600px) {
-    .card {
-        flex-direction: row;
-    }
+  .card {
+    flex-direction: row;
+  }
 
-    .profile-img {
-        width: 12em;
-        height: 100%;
-        border-radius: .5em 0em 0em .5em;
-    }
-
- 
+  .profile-img {
+    width: 12em;
+    height: 100%;
+    border-radius: 0.5em 0em 0em 0.5em;
+  }
 }
