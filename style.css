@@ -113,8 +113,8 @@ h1 .hi {
 }
 .profile-img {
   width: 100%;
-  border: 3px solid #f5cda9;
-  border-radius: 0.5em 0.5em 0em 0em;
+  /* border: 3px solid #f5cda9;
+  border-radius: 0.5em 0.5em 0em 0em; */
 }
 .profile-main {
   padding: 0.5em;
@@ -143,111 +143,132 @@ h2 {
 /* section work */
 
 .work {
- min-height: 100vh;
-  border: 1px solid red;
-  width: 100%;
-  display:grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
+  margin-top: 2em;
+ /* min-height: 100vh; */
  
-  
-  
-   
+  width: 100%;
+  text-align: center;
+
 }
 .portfolio {
   color: #ffdebf;
   font-size: 2.2em;
   font-weight: 400;
-  font-size: 6vw;
-  align-self: center;
- 
-
   
-
-
+  
 }
 
-.container-gallery {
-  /* grid-row: 2; */
-  /* margin-top:7em; */
-  border: 1px solid wheat;
-  width: 90%;
+.container-portfolio {
+  
+  /* margin: 3.6em; */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: .5em;
+  grid-auto-rows: 100px 300px;
+  gap: 1em;
+  /* min-height: 100vh; */
 }
-
 
 .gallery-item {
-  background-color: #8a4f17;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.item-1 {
-  grid-column: 1/5;
-  grid-row: 1/4;
-  background-image: url(img/omnifood_35_2_optimized.png);
-  background-position: top left;
-  background-color: rgba(26, 26, 26, 0.8);
-  background-blend-mode: multiply;
-
- 
+.gallery-item .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-.item-2 {
-  grid-column: 5/7;
-  grid-row: 1/9;
-  background-image: url(img/lovescript_50_optimized.png);
-  background-position: center;
-  background-size: cover;
-  background-color: rgba(26, 26, 26, 0.4);
+
+.gallery-item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  background-color: #1a1a1a;
+  opacity: .4;
   background-blend-mode: multiply;
 }
 
-.item-3 {
-  grid-column: 1/5;
-  grid-row: span 5/9;
-  background-image: url(img/tijuana-html-2022-01-31-01_04_36_optimized.png);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(26, 26, 26, 0.8);
-  background-blend-mode: multiply;
+.gallery-item:hover .image img {
+  transform: scale(1.1);
 }
 
-h4  {
-  text-align: center;
-  margin-bottom: 1em;
+.gallery-item .text-gallery a{
   color: #e68327;
-  font-size: 1.6em;
-  
-}
-h5 {
-  text-align: center;
-  margin-top: -2.5em;
-  font-size: 1em;
- padding-top: .3em;
- font-weight: 600;
- color: #f5cda9;
- padding-bottom: 1em;
-}
-
-a {
-  text-decoration: none;
-  color: #e68327;
+opacity: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 2em;
+z-index: 4;
+transition: .3s ease-in-out;
+backdrop-filter: blur(5px) saturate(1.8) ;
+-webkit-backdrop-filter: blur(5px) saturate(1.8);
 }
 
-.gallery-item-text {
-  line-height: 1;
-  padding: .5em;
-  text-align: center;
-  z-index: 100;
-  font-size: .8em;
+.gallery-item:hover .text-gallery a {
+  opacity: 1;
+  padding: 1em;
+  width: 100%;
 }
+
+.gallery-item .text-gallery-para {
+  color: #fdf3e9;
+opacity: 1;
+position: absolute;
+top: 70%;
+left: 50%;
+transform: translate(-50%, -70%);
+text-align: left !important;
+margin-left: -1em;
+
+
+pointer-events: none;
+/* z-index: 4; */
+transition: .5s ease-in-out;
+backdrop-filter: blur(5px) saturate(1.8);
+-webkit-backdrop-filter: blur(5px) saturate(1.8);
+
+} 
+
+
+
+
+
+
+
+.w-1 {
+  border: 5px solid #fdf3e9;
+  grid-column: span 6;
+  grid-row: 1/3;
+}
+
+.w-2 {
+  border: 5px solid #fdf3e9;
+  grid-column:  span 4;
+  grid-row:span 2;
+}
+
+.w-3 {
+  border: 5px solid #fdf3e9;
+  grid-column:  span 2;
+  grid-row: 3/5;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* ******************************************************* */
 
 /* ******medeia query************************************ */
@@ -261,5 +282,18 @@ a {
     width: 12em;
     height: 100%;
     border-radius: 0.5em 0em 0em 0.5em;
+  }
+
+
+}
+
+@media (max-width: 600px) {
+  .container-portfolio {
+    /* margin-left: 1em; */
+    gap: .5em;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .w-1,.w-2, .w-3 {
+    grid-column:  1;
   }
 }
