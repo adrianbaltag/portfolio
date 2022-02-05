@@ -66,7 +66,7 @@ gsap.from(".card", {
     }
 })
 
-
+// show portfolio grid
 let btn = document.getElementById("btn");
 btn.addEventListener("click", function () {
   document.querySelector(".container-portfolio").style.display = "grid";
