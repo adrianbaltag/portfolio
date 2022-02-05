@@ -65,3 +65,9 @@ gsap.from(".card", {
        
     }
 })
+
+
+let btn = document.getElementById("btn");
+btn.addEventListener("click", function () {
+  document.querySelector(".container-portfolio").style.display = "grid";
+});

@@ -150,18 +150,27 @@ h2 {
   text-align: center;
 
 }
-.portfolio {
+button {
   color: #ffdebf;
   font-size: 2.2em;
   font-weight: 400;
-  
+  border: 3px solid #e68327;
+  border-radius: .3em 0em .3em 0em;
+  background-color: transparent;
+  padding: .5em 2em;
+  margin-bottom: 1em;
+  transition: all .3s;
+}
+
+button:hover {
+  background-color: #e68327;
   
 }
 
 .container-portfolio {
   
   /* margin: 3.6em; */
-  display: grid;
+  display: none;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: 100px 300px;
   gap: 1em;
